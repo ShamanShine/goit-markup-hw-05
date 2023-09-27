@@ -55,7 +55,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="main-section">Effective Solutions for Your Business</h1>
-                <button class="main-button" type="button">Order Service</button>
+                <button class="main-button" type="button" data-modal-open>Order Service</button>
             </div>
         </section>
 
@@ -404,12 +404,36 @@
         </div>
     </footer>
     <!-- Modal window -->
-    <div id="myModal" class="modal">
-        <div class="backdrop is-hidden" data-modal></div>
-        <div class="modal-content">
+    <!-- <div id="myModal" class="modal"> -->
+    <div class="backdrop " data-modal>
+        <div class="modal">
             <button class="modal-close" type="button" data-modal-close>X</button>
-            <h2>Заголовок модального окна</h2>
+            <h2>Leave your contacts we will call you back</h2>
+            <form name="contact-form">
+                <div class="topic">
+                    <label class="label" for="user-name">Name</label>
+                    <input id="user-name" type="text" name="name" placeholder="Name" />
+                </div>
+
+                <div class="topic">
+                    <label class="label" for="phone">Phone</label>
+                    <input id="phone" type="number" name="phone" placeholder="phone" />
+                </div>
+                <div class="topic">
+                    <label class="label" for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="email" />
+                </div>
+                <div class="topic">
+                    <label class="label" for="coment">Coment</label>
+                    <textarea name="coment" id="coment" rows="15" placeholder="Text input"></textarea>
+
+                </div>
+            </form>
+
             <p>Содержимое модального окна...</p>
+        </div>
+    </div>
 </body>
+
 
 </html>
