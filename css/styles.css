@@ -690,11 +690,12 @@ a {
 
 .backdrop {
     position: fixed;
+
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--c-border-);
+    background-color: #FCFCFC;
     opacity: 1;
     visibility: visible;
     transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
@@ -709,9 +710,10 @@ a {
 .modal {
 
     position: relative;
+    width: 408px;
+    height: 584px;
 
-    width: 600px;
-    background-color: #d7d8e5;
+    background-color: #deaeae;
     border-radius: 15px;
     padding: 48px;
     justify-content: center;
@@ -730,6 +732,8 @@ a {
     width: 24px;
     height: 24px;
 
+    fill: #E7E9FC;
+    stroke-width: 1px;
 
 }
 
@@ -746,13 +750,15 @@ a {
 .label {
     display: block;
     width: 360px;
+    margin-bottom: 4px
 }
 
 
-textarea {
+.textarea {
     font-family: inherit;
     font-size: 100%;
     line-height: 1.15;
     margin: 0;
     width: 100%;
+    resize: both;
 }
