@@ -689,7 +689,7 @@ a {
 /* Modal window */
 
 .backdrop {
-    /* position: fixed; */
+    position: fixed;
 
     width: 100%;
     max-width: 1440px;
@@ -700,10 +700,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #b4f09e;
+    background-color: rgba(46, 47, 66, 0.4);
     opacity: 1;
-    visibility: visible;
-    transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
@@ -714,24 +714,27 @@ a {
 
 .modal {
 
-    position: relative;
+    position: absolute;
     width: 100%;
     max-width: 408px;
     height: 100%;
-    max-height: 584px;
-
-    padding-top: 72px;
+    min-height: 584px padding-top: 72px;
     padding-left: 24px;
     padding-right: 24px;
 
+    top: 50%;
+    left: 50%;
 
+    transform: translate(-50%, -50%) scale(1);
 
     font-family: Roboto;
     background-color: #FCFCFC;
-    border-radius: 15px;
+    border-radius: 4px;
     /* padding: 48px; */
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -739,15 +742,19 @@ a {
     position: absolute;
     top: 24px;
     right: 24px;
-
+    align-items: center;
+    cursor: pointer;
     border-radius: 50%;
     background-color: #E7E9FC;
-
+    justify-content: center;
     width: 24px;
     height: 24px;
-
+    border: 1px solid rgba(0, 0, 0, 0.1);
     fill: #E7E9FC;
     stroke-width: 1px;
+    display: flex;
+    padding: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -755,14 +762,24 @@ a {
     background-color: #404BBF;
 }
 
-.h2-modal {
+.modal-close:hover {
+    background-color: #404bbf;
+    border: none;
+}
+
+.modal-close:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.main-modal-par {
     font-family: Roboto;
     font-size: 16px;
-
-
+    color: #2E2F42;
+    margin-bottom: 16px;
     font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     text-align: center;
 }
 
@@ -798,18 +815,20 @@ a {
     height: 40px;
     width: 100%;
     /* border-radius: 4px; */
-    border: 1.5px solid var(--c-border-);
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    background-color: var(--c-background-light);
+    background-color: transparent;
     /* padding: 22px 24px; */
-    transition: border-color 250ms;
-    padding-left: 34px;
+
+    padding-left: 38px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .modal-input .modal-chekbox:focus {
     outline: none;
-    border-color: #404BBF;
+    border-color: #4D5AE5;
 }
 
 .modal-label {
@@ -817,22 +836,32 @@ a {
     /* width: 360px; */
     margin-bottom: 4px;
     color: #8E8F99;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
 }
 
 .div-textarea {
-    margin-bottom: 0;
+    margin-bottom: 16px;
 }
 
 .modal-textarea {
     /* width: 360px; */
     min-height: 120px;
     font-size: 100%;
-    line-height: 1.15;
+    line-height: 1.17;
     margin: 0;
+    padding: 8px 16px;
     width: 100%;
+    background-color: transparent;
+    letter-spacing: 0.04em;
+    font-size: 12px;
+    color: rgba(46, 47, 66, 0.4);
     resize: none;
     border-radius: 4px;
-    border: 1px solid var(--c-brand);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-chekbox {
@@ -847,11 +876,21 @@ a {
     letter-spacing: 0.48px;
 }
 
+/* .chekbox-input { */
+visually-hidden;
+}
+
 .modal-button {
     margin: 0 auto;
 }
 
 .underlined {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    width: 16px;
+    height: 16px;
     text-decoration: underline;
     font-family: Roboto;
     font-size: 12px;
@@ -860,6 +899,9 @@ a {
     line-height: 16px;
     letter-spacing: 0.48px;
     color: blue;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .last-form {
