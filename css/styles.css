@@ -691,11 +691,16 @@ a {
 .backdrop {
     position: fixed;
 
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    max-height: 676px;
+
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FCFCFC;
+    background-color: #b4f09e;
     opacity: 1;
     visibility: visible;
     transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
@@ -710,12 +715,21 @@ a {
 .modal {
 
     position: relative;
-    width: 408px;
-    height: 584px;
+    width: 100%;
+    max-width: 408px;
+    height: 100%;
+    max-height: 584px;
 
-    background-color: #deaeae;
+    padding-top: 72px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+
+
+    font-family: Roboto;
+    background-color: #FCFCFC;
     border-radius: 15px;
-    padding: 48px;
+    /* padding: 48px; */
     justify-content: center;
     align-items: center;
 
@@ -737,28 +751,113 @@ a {
 
 }
 
-.topic input {
-    width: 100%;
-    /* Растягиваем поле на 100% ширины контейнера */
-    padding: 5px;
+.modal-close:active {
+    background-color: #404BBF;
+}
+
+.h2-modal {
+    font-family: Roboto;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
+
+
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    text-align: center;
 }
 
-.label {
-    display: block;
+.topic {
+    /* width: 100%; */
+    /* Растягиваем поле на 100% ширины контейнера */
     width: 360px;
-    margin-bottom: 4px
+    height: 58px;
+
+    /* padding: 5px; */
+    font-size: 16px;
+    /* border: 1px solid #f43535; */
+    /* border-radius: 4px; */
+    /* margin-bottom: 10px; */
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
+.modal-input-wrap {
+    position: relative;
+    /* padding-left: 16px; */
+}
 
-.textarea {
-    font-family: inherit;
+.modal-input-icon {
+    position: absolute;
+    /* top: 50%; */
+    transform: translateY(40%);
+    margin-left: 16px;
+}
+
+.modal-input {
+    width: 360px;
+    height: 40px;
+    width: 100%;
+    /* border-radius: 4px; */
+    border: 1.5px solid var(--c-border-);
+    border-radius: 4px;
+    background-color: var(--c-background-light);
+    /* padding: 22px 24px; */
+    transition: border-color 250ms;
+    padding-left: 34px;
+
+}
+
+.modal-input .modal-chekbox:focus {
+    outline: none;
+    border-color: #404BBF;
+}
+
+.modal-label {
+    display: block;
+    /* width: 360px; */
+    margin-bottom: 4px;
+    color: #8E8F99;
+}
+
+.div-textarea {
+    margin-bottom: 0;
+}
+
+.modal-textarea {
+    /* width: 360px; */
+    min-height: 120px;
     font-size: 100%;
     line-height: 1.15;
     margin: 0;
     width: 100%;
-    resize: both;
+    resize: none;
+    border-radius: 4px;
+    border: 1px solid var(--c-brand);
+}
+
+.modal-chekbox {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-family: Roboto;
+    font-size: 12px;
+
+    font-weight: 400;
+    line-height: 14px;
+
+    letter-spacing: 0.48px;
+}
+
+.modal-button {
+    margin: 0 auto;
+}
+
+.underlined {
+    text-decoration: underline;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.48px;
+    color: blue;
 }
