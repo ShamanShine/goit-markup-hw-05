@@ -424,7 +424,7 @@
 
     <!-- Modal window -->
     <!-- <div id="myModal" class="modal"> -->
-    <div class="backdrop " data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <!-- modal close button -->
             <button class="modal-close" type="button" data-modal-close><svg class="close-icon" width="8" height="8">
@@ -440,7 +440,9 @@
                         <svg class="modal-input-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
                         </svg>
-                        <input class="modal-input" id="user-name" type="text" name="user-name" placeholder="" />
+
+                        <input class="modal-input" id="user-name" type="text" name="user-name" />
+
                     </div>
                 </div>
                 <!-- Tel -->
@@ -473,9 +475,18 @@
                 </div>
                 <!-- Modal Chekbox -->
                 <div class="modal-chekbox">
-                    <input class="visually-hidden" id="user-privacy" type="checkbox" value="1" name="user-privacy">
-                    <label class="modal-label" for="user-privacy">I accept the terms and conditions of the
-                        <span class="under">Privacy Policy</span></label>
+                    <input class="visually-hidden" id="user-privacy" type="checkbox" value="accepted"
+                        name="user-privacy">
+                    <label class="modal-label" for="user-privacy">
+                        <svg class="checkbox-icon unchecked" width="16" height="16">
+                            <use href="./images/icons.svg#icon-Property-1Default"></use>
+                        </svg>
+                        <svg class="checkbox-icon checked" width="16" height="16">
+                            <use href="./images/icons.svg#icon-Property-1click"></use>
+                        </svg>
+                        I accept the terms and conditions of the
+                        <span class="under">Privacy Policy</span>
+                    </label>
                 </div>
                 <!-- Modal Button -->
                 <button class="main-button modal-button" type="submit">Sent</button>
