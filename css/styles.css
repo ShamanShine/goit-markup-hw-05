@@ -46,6 +46,10 @@ button {
     font-family: inherit;
 }
 
+body {
+    font-family: Roboto;
+}
+
 /* header,logo,navigation */
 .header-best {
     display: flex;
@@ -717,8 +721,10 @@ a {
     position: absolute;
     width: 100%;
     max-width: 408px;
+    min-height: 584px;
     height: 100%;
-    min-height: 584px padding-top: 72px;
+
+    padding-top: 72px;
     padding-left: 24px;
     padding-right: 24px;
 
