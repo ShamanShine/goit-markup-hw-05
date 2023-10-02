@@ -985,19 +985,28 @@ a {
 }
 
 .footer-email {
+    display: flex;
     width: 264px;
     height: 40px;
+    padding-left: 16px;
+    gap: 24px;
     border-radius: 4px;
     border: 1px solid var(--WHITE, #FFF);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    background: #2E2F42;
 
-    color: #FFF;
+    background: #2E2F42;
+    line-height: 1.5;
+    color: #ffffff;
     font-family: Roboto;
     font-size: 12px;
-
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     font-weight: 400;
     line-height: 24px;
 
-    letter-spacing: 0.48px;
+    letter-spacing: 0.04em;
 }
+
+.footer-email::placeholder {
+    color #ffffff;
+}
+
+.label-last-footer {}
