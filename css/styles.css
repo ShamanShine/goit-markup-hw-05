@@ -863,11 +863,11 @@ a {
     /* width: 360px; */
     margin-bottom: 4px;
     color: #8E8F99;
-    /* font-size: 12px; */
+    font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
 
-    font-size: 16px;
+
 }
 
 
@@ -912,15 +912,21 @@ a {
     letter-spacing: 0.48px;
 }
 
-.checkbox-icon unchecked {
+.checkbox-icon.unchecked {
     vertical-align: middle;
     margin-right: 8px;
     fill: #FFFFFF;
     border: 1px solid;
+
+
+
 }
 
 .checkbox-icon.checked {
     display: none;
+    margin-left: auto;
+    vertical-align: middle;
+
 }
 
 .visually-hidden:not(:checked)+.modal-label .checkbox-icon:not(.checked) {
@@ -929,6 +935,9 @@ a {
 
 .visually-hidden:checked+.modal-label .checkbox-icon.checked {
     display: inline-block;
+
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
 .visually-hidden {
@@ -938,7 +947,20 @@ a {
     height: 1px;
     overflow: hidden;
     pointer-events: none;
+
+
 }
+
+
+.visually-hidden.click:checked+.modal-label>.span-checkbox {
+    background-color: #ffffff;
+    border: none;
+    fill: #FFFFFF;
+    border-color: #404BBF;
+
+    opacity: 0;
+}
+
 
 .modal-button {
     margin: 0 auto;
@@ -1011,5 +1033,3 @@ a {
 .footer-email::placeholder {
     color: #ffffff;
 }
-
-.label-last-footer {}
