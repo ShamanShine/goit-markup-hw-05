@@ -922,6 +922,10 @@ a {
     justify-content: center;
     fill: transparent;
     vertical-align: bottom;
+   
+   
+    
+    
     width: 16px;
     margin-right: 8px;
     height: 16px;
@@ -933,10 +937,10 @@ a {
 
 
 .visually-hidden:checked + .modal-label> .span-checkbox {
-    background-color: #1616eb;
     border: none;
-    fill: #FFFFFF;
     border-color: #404BBF;
+    background-color:#404bbf;
+    fill: #F4F4FD;
   }
 
 .under {
