@@ -884,6 +884,9 @@ a {
 }
 
 .modal-chekbox {
+    display: flex;
+    align-items: center;
+   
     margin-top: 16px;
     margin-bottom: 24px;
     font-family: Roboto;
@@ -893,28 +896,15 @@ a {
     letter-spacing: 0.48px;
 }
 
-.checkbox-icon.unchecked {
-    vertical-align: middle;
-    margin-right: 8px;
-    fill: #FFFFFF;
-    border: 1px solid;
-}
-
 .checkbox-icon.checked {
-    display: none;
-    margin-left: auto;
-    vertical-align: middle;
-}
-
-.visually-hidden:not(:checked)+.modal-label .checkbox-icon:not(.checked) {
-    display: inline-block;
-}
-
-.visually-hidden:checked+.modal-label .checkbox-icon.checked {
-    display: inline-block;
-
-    opacity: 1;
-    transition: opacity 1s ease;
+    width: 20px;
+    height: 20px;
+    fill: transparent;
+    stroke: #ffffff; /* Цвет галки */
+    stroke-width: 3; /* Толщина галки */
+    transition: stroke 0.2s ease-in-out;
+   
+    
 }
 
 .visually-hidden {
@@ -931,7 +921,9 @@ a {
     align-items: center;
     justify-content: center;
     fill: transparent;
+    vertical-align: bottom;
     width: 16px;
+    margin-right: 8px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
@@ -939,15 +931,13 @@ a {
 }
 
 
-.visually-hidden.click:checked+.modal-label>.span-checkbox {
-    background-color: #404bbf;
+
+.visually-hidden:checked + .modal-label> .span-checkbox {
+    background-color: #1616eb;
     border: none;
-    fill: #F4F4FD;
+    fill: #FFFFFF;
     border-color: #404BBF;
-    opacity: 0;
-}
-
-
+  }
 
 .under {
     color: #4d5ae5;
