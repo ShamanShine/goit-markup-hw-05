@@ -863,6 +863,7 @@ fill: #ffffff;
 }
 
 .modal-label {
+
     display: block;
     margin-bottom: 4px;
     color: #8E8F99;
@@ -870,6 +871,8 @@ fill: #ffffff;
     line-height: 1.17;
     letter-spacing: 0.04em;
 }
+
+
 
 .div-textarea {
     margin-bottom: 16px;
@@ -1021,8 +1024,8 @@ fill: #ffffff;
     font-size: 12px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     font-weight: 400;
-    line-height: 24px;
 
+    line-height: 1.5;
     letter-spacing: 0.04em;
 }
 
