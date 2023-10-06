@@ -684,7 +684,6 @@ a {
 .tools-footer {
     display: flex;
     align-items: baseline;
-
 }
 
 /* Modal window */
@@ -693,12 +692,9 @@ a {
     position: fixed;
     width: 100%;
     height: 100%;
-
     top: 0;
     left: 0;
-
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
     inset: 0;
     display: flex;
     align-items: center;
@@ -721,18 +717,14 @@ a {
     width: 100%;
     max-width: 408px;
     min-height: 584px;
-    height: 100%;
 
     padding-top: 72px;
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 24px;
-
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%) scale(1);
-
     font-family: Roboto;
     background-color: #FCFCFC;
     border-radius: 4px;
@@ -798,9 +790,7 @@ a {
 }
 
 .topic {
-
     width: 360px;
-
     margin-bottom: 8px;
 }
 
@@ -837,12 +827,11 @@ a {
     padding-left: 38px;
     outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .modal-chekbox:focus {
     outline: none;
-    border-color: #4D5AE5;
+    border-color: var(--c-brand);
 }
 
 .modal-label {
@@ -853,8 +842,6 @@ a {
     line-height: 1.17;
     letter-spacing: 0.04em;
 }
-
-
 
 .div-textarea {
     margin-bottom: 16px;
@@ -886,7 +873,7 @@ a {
 .modal-chekbox {
     display: flex;
     align-items: center;
-   
+
     margin-top: 16px;
     margin-bottom: 24px;
     font-family: Roboto;
@@ -897,14 +884,9 @@ a {
 }
 
 .checkbox-icon.checked {
-    width: 20px;
-    height: 20px;
-    fill: transparent;
-    stroke: #ffffff; /* Цвет галки */
-    stroke-width: 3; /* Толщина галки */
-    transition: stroke 0.2s ease-in-out;
-   
-    
+
+    fill: #F4F4FD;
+
 }
 
 .visually-hidden {
@@ -922,10 +904,6 @@ a {
     justify-content: center;
     fill: transparent;
     vertical-align: bottom;
-   
-   
-    
-    
     width: 16px;
     margin-right: 8px;
     height: 16px;
@@ -936,12 +914,12 @@ a {
 
 
 
-.visually-hidden:checked + .modal-label> .span-checkbox {
+.visually-hidden:checked+.modal-label>.span-checkbox {
     border: none;
     border-color: #404BBF;
-    background-color:#404bbf;
+    background-color: #404bbf;
     fill: #F4F4FD;
-  }
+}
 
 .under {
     color: #4d5ae5;
