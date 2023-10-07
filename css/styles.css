@@ -343,7 +343,6 @@ a {
 }
 
 
-
 .team {
     color: var(--c-primary);
     line-height: 1.11;
@@ -663,10 +662,10 @@ a {
     pointer-events: none;
 }
 
-/* .is-hidden { */
-opacity: 1;
-visibility: visible;
-pointer-events: auto;
+.is-hidden {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .modal {
